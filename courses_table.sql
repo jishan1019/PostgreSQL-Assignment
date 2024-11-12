@@ -11,4 +11,4 @@ INSERT INTO courses (course_name, credits) VALUES
 ('Databases', 3),
 ('Prisma', 3);
 
-SELECT * FROM courses
+-- SELECT * FROM courses
