@@ -7,6 +7,9 @@ INSERT INTO students(student_name, age, email, frontend_mark, backend_mark, stat
 
 
 
+
+
+
 -- Query 2: 
 SELECT student_name FROM enrollment
     JOIN students USING(student_id)
@@ -14,6 +17,8 @@ SELECT student_name FROM enrollment
             WHERE course_name = 'Next.js';
 
 --Explain Query 2 purpose and functionality:
+
+
 
 
 
@@ -30,4 +35,36 @@ UPDATE students SET status = 'Awarded' WHERE student_id = (
 
 
 
+
+
+-- Query 4:
+DELETE FROM courses
+    WHERE course_id NOT IN (SELECT DISTINCT course_id FROM enrollment);
+
+--Explain Query 4 purpose and functionality:
+
+
+
+
+
+-- Query 5:
+SELECT * FROM students ORDER BY student_id ASC LIMIT 2 OFFSET 2
+
+--Explain Query 5 purpose and functionality:
+
+
+
+
+
+-- Query 6:
+
+
+
+
+
+
 SELECT * FROM students
+
+SELECT * FROM courses
+
+SELECT * FROM enrollment
