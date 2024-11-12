@@ -17,4 +17,17 @@ SELECT student_name FROM enrollment
 
 
 
+-- Query 3: 
+UPDATE students SET status = 'Awarded' WHERE student_id = (
+    SELECT student_id FROM students
+        ORDER BY (frontend_mark + backend_mark) DESC
+            LIMIT 1
+)
+
+--Explain Query 3 purpose and functionality:
+
+
+
+
+
 SELECT * FROM students
