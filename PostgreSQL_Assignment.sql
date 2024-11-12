@@ -7,6 +7,14 @@ INSERT INTO students(student_name, age, email, frontend_mark, backend_mark, stat
 
 
 
--- Query 2
+-- Query 2: 
+SELECT student_name FROM enrollment
+    JOIN students USING(student_id)
+        JOIN courses USING(course_id)
+            WHERE course_name = 'Next.js';
+
+--Explain Query 2 purpose and functionality:
+
+
 
 SELECT * FROM students
