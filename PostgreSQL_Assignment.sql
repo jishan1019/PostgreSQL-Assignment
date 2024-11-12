@@ -57,6 +57,13 @@ SELECT * FROM students ORDER BY student_id ASC LIMIT 2 OFFSET 2
 
 
 -- Query 6:
+SELECT course_name, count(student_id) FROM enrollment
+    JOIN students USING(student_id)
+        JOIN courses USING(course_id)
+            GROUP BY course_name
+
+--Explain Query 6 purpose and functionality:
+
 
 
 
