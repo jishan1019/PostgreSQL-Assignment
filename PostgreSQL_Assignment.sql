@@ -65,13 +65,26 @@ SELECT course_name, count(student_id) FROM enrollment
 --Explain Query 6 purpose and functionality:
 
 
+-- Query 7:
+SELECT ROUND(AVG(age), 2) AS average_age
+    FROM students;
+
+--Explain Query 7 purpose and functionality:
 
 
 
 
 
-SELECT * FROM students
 
-SELECT * FROM courses
+-- Query 8:
+SELECT student_name
+    FROM students
+        WHERE email LIKE '%example.com%'
 
-SELECT * FROM enrollment
+--Explain Query 8 purpose and functionality:
+
+
+
+
+
+
